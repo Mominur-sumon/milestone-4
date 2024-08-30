@@ -1,15 +1,15 @@
 
-const car = {type:"Fiat", model:"500", color:"white"};
-console.log(car , typeof car); // { type: 'Fiat', model: '500', color: 'white' } 'object'
-const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
-console.log(person , typeof person); // { firstName: 'John', lastName: 'Doe', age: 50, eyeColor: 'blue' } 'object'
+const car = { type: "Fiat", model: "500", color: "white" };
+console.log(car, typeof car); // { type: 'Fiat', model: '500', color: 'white' } 'object'
+const person = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" };
+console.log(person, typeof person); // { firstName: 'John', lastName: 'Doe', age: 50, eyeColor: 'blue' } 'object'
 
 // Object declare in multiple line
 const person1 = {
-    firstName:"John",
-    lastName:"Doe",
-    age:50,
-    eyeColor:"blue"
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
 };
 console.log(person1, typeof person1); // { firstName: 'John', lastName: 'Doe', age: 50, eyeColor: 'blue' } 'object'
 
@@ -58,10 +58,48 @@ Displaying the Object Properties in a Loop
 Displaying the Object using Object.values()
 Displaying the Object using JSON.stringify()
 */
-const person6 = {
-    firstName:"John",
-    lastName:"Doe",
-    age:50,
-    eyeColor:"blue"
-};
-document.getElementById("demo").innerHTML = person6.firstName + " is " + person6.age + " years old.";
+
+//creating more object from a object
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.nationality = "Bangladeshi";
+}
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+const mySister = new Person("Anna", "Rally", 18, "green");
+
+const mySelf = new Person("Johnny", "Rally", 22, "green");
+console.log(myFather, myMother, mySister, mySelf);
+
+//constructor function methods 
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+    this.fullName = function () {
+        return this.firstName + " " + this.lastName;
+    };
+}
+const myFather1 = new Person("John", "Doe", 50, "blue");
+console.log(myFather1.fullName());
+
+//JavaScript Object Methods
+new Object()   // A new Object object
+new Array()    // A new Array object
+new Map()      // A new Map object
+new Set()      // A new Set object
+new Date()     // A new Date object
+new RegExp()   // A new RegExp object
+new Function() // A new Function object    
+
+// Use object literals {} instead of new Object().
+
+// Use array literals [] instead of new Array().
+
+// Use pattern literals /()/ instead of new RegExp().
+
+// Use function expressions () {} instead of new Function().
