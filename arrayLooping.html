@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping with array</title>
+</head>
+<body>
+    <h1>Javascript arrays</h1>
+    <p>Looping through an array</p>
+
+    <p id="demo"></p>
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        let len = cars.length;
+        let text = "<ul>";
+        for (let i = 0; i < len; i++) {
+            text += "<li>" + cars[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+    // Using forEach() method
+    <p id="demo2"></p>
+    <script>
+        const cars1 = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        let text1 = "<ul>";
+        cars.forEach(myFunction);
+        text += "</ul>";
+        document.getElementById("demo2").innerHTML = text;
+        function myFunction(value) {
+            text1 += "<li>" + value + "</li>";
+        }
+        cars1.push("Toyota");
+    </script>
+</body>
+</html>
+
+<!-- In JavaScript, arrays use numbered indexes.  
+
+In JavaScript, objects use named indexes. -->
