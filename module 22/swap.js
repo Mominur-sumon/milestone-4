@@ -21,3 +21,15 @@ let p = 50;
 let q = 60;
 [p, q] = [q, p];
 console.log(p, q);
+
+
+// for (var i = 0; i < 5; i++) {
+//     setTimeout(function () {
+//     console.log(i);
+//  }, 100);
+// }
+
+let m = 10 ;
+let n = "monir";
+[m, n] = [n, m];
+console.log(m,n);
